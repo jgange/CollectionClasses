@@ -1,4 +1,5 @@
 namespace character;
+﻿using System.Text.Json;
 
 /*
     Character race consists of-
@@ -16,13 +17,13 @@ namespace character;
 
 class Race
 {
-    string RaceName {get; set;} = "Human";
-    string RaceType {get; set;} = "Base Human";
-    int StartingTaint {get; set;} = 0;
-    List<string> Languages {get; set;} = new List<string>();
-    List<string> Skills {get; set;} = new List<string>();
-    List<string> SpecialAbilities {get; set;} = new List<string>();
-    Dictionary<string,int> BaseAttributes {get; set;} = new Dictionary<string, int>
+    public string RaceName {get; set;} = "Human";
+    public string RaceType {get; set;} = "Base Human";
+    public int StartingTaint {get; set;} = 0;
+    public List<string> Languages {get; set;} = new List<string>();
+    public List<string> Skills {get; set;} = new List<string>();
+    public List<string> SpecialAbilities {get; set;} = new List<string>();
+    public Dictionary<string,int> BaseAttributes {get; set;} = new Dictionary<string, int>
     {
         {"Strength",10},
         {"Constitution",10},
@@ -31,8 +32,22 @@ class Race
         {"Intellect",10},
         {"Power",10}
     };
-    List<string> Backgrounds {get; set;} = new List<string>();
+    public List<string> Backgrounds {get; set;} = new List<string>();
 
+    public Race(){}
+
+    public Race(string raceName, string raceType, int startingTaint, List<string> languages, List<string> skills, List<string> specialAbilities, Dictionary<string,int> baseAttributes, List<string> backgrounds)
+    {
+        RaceName = raceName;
+        RaceType = raceType;
+        StartingTaint = startingTaint;
+        Languages = languages;
+        Skills = skills;
+        SpecialAbilities = specialAbilities;
+        BaseAttributes = baseAttributes;
+        Backgrounds = backgrounds;
+    }
+    
     public void Display()
     {
         Console.WriteLine("Race: {0}", this.RaceName);
@@ -65,4 +80,34 @@ class Race
             }
         }
     }
+
+    public List<Race>? Deserialize(string path)
+    {
+        StreamReader r = new StreamReader(path);
+        string? json = r.ReadToEnd();
+        return JsonSerializer.Deserialize<List<Race>>(json);
+    }
+
+    public void WriteToDisk(string fileName)
+    {
+        var systemJsonReadable = JsonSerializer.Serialize(this, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+        //Console.WriteLine(systemJsonReadable);
+        //Console.WriteLine();
+        File.WriteAllText(fileName, systemJsonReadable);
+    }
+
+    static public void WriteListToDisk(string fileName, List<Race> races)
+    {
+        var systemJsonReadable = JsonSerializer.Serialize(races, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+        //Console.WriteLine(systemJsonReadable);
+        //Console.WriteLine();
+        File.WriteAllText(fileName, systemJsonReadable);
+    }
+
 }
