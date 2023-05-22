@@ -81,7 +81,7 @@ class Race
         }
     }
 
-    public List<Race>? Deserialize(string path)
+    static public List<Race>? Deserialize(string path)
     {
         StreamReader r = new StreamReader(path);
         string? json = r.ReadToEnd();

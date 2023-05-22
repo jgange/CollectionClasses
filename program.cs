@@ -16,6 +16,7 @@ namespace character
             };
 
             string fileName = @"./CharacterRacesOut.json";
+            //string? json;
 
             Race HumanRace = new Race("Human","Base Human",0,new List<string>(),new List<string>(),new List<string>(),
                 new Dictionary<string, int>
@@ -52,12 +53,21 @@ namespace character
             races.Add(ElvenRace);
 
             Race.WriteListToDisk(fileName, races);
+            List<Race>? racelist = new List<Race>();
+            racelist = Race.Deserialize(fileName);
+
+            foreach(var CharacterRace in racelist)
+            {
+                CharacterRace.Display();
+            }
+
     }
 
     static string? GetJsonFromDisk(string fileName)
     {
         StreamReader r = new StreamReader(fileName);
         string? json = r.ReadToEnd();
+        Console.WriteLine(json);
         return json;
         }
     }
