@@ -1,0 +1,15 @@
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.csproj.AssemblyReference.cache
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.AssemblyInfoInputs.cache
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.AssemblyInfo.cs
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.csproj.CoreCompileInputs.cache
+C:\Users\jgange\Projects\C#\CollectionClasses\bin\Debug\net6.0\CollectionClasses.exe
+C:\Users\jgange\Projects\C#\CollectionClasses\bin\Debug\net6.0\CollectionClasses.deps.json
+C:\Users\jgange\Projects\C#\CollectionClasses\bin\Debug\net6.0\CollectionClasses.runtimeconfig.json
+C:\Users\jgange\Projects\C#\CollectionClasses\bin\Debug\net6.0\CollectionClasses.dll
+C:\Users\jgange\Projects\C#\CollectionClasses\bin\Debug\net6.0\ref\CollectionClasses.dll
+C:\Users\jgange\Projects\C#\CollectionClasses\bin\Debug\net6.0\CollectionClasses.pdb
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.dll
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\ref\CollectionClasses.dll
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.pdb
+C:\Users\jgange\Projects\C#\CollectionClasses\obj\Debug\net6.0\CollectionClasses.genruntimeconfig.cache

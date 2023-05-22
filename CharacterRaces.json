@@ -1,0 +1,17 @@
+{
+    "RaceName":"Human",
+    "RaceType":"Base Human",
+    "Base Attributes":
+    {
+        "Strength":10,
+        "Constitution":10,
+        "Dexterity":10,
+        "Size":10,
+        "Intellect":10,
+        "Power":10
+    },
+    "Special Abilities":{},
+    "StartingTaint":0,
+    "Skills":{},
+    "Languages":{}    
+}
