@@ -6,16 +6,21 @@ namespace character
     {
         public static void Main()
         {
-            List<Race>? races = new List<Race>();
-            races = utilities.ReadFromDisk<Race>(@"./CharacterRaces.json");
-            if (races!=null)
+            List<Equipment> equipmentlist = new List<Equipment>();
+            Equipment SaddleAndTack = new Equipment("Saddle and tack","This includes items such as saddles, stirrups, bridles, halters, reins, bits, and harnesses.","50sp");
+            Equipment SewingKit = new Equipment("Sewing kit","Needles, thread, buttons, etc.","10sp");
+            equipmentlist.Add(SaddleAndTack);
+            equipmentlist.Add(SewingKit);
+
+            if (equipmentlist!=null)
             {
-                foreach(Race r in races)
+                //utilities.WriteToDisk(@"./DataFiles/EquipmentList.json", equipmentlist);
+                foreach (Equipment e in equipmentlist)
                 {
-                    utilities.Display(r);
+                    utilities.Display(e);
                 }
             }
-            if (races!=null) { utilities.WriteToDisk(@"./CharacterRaces1.json", races); }
+
         }
     }
 }

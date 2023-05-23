@@ -1,0 +1,12 @@
+[
+  {
+    "EquipmentName": "Saddle and tack",
+    "EquipmentDescription": "This includes items such as saddles, stirrups, bridles, halters, reins, bits, and harnesses.",
+    "EquipmentValue": "50sp"
+  },
+  {
+    "EquipmentName": "Sewing kit",
+    "EquipmentDescription": "Needles, thread, buttons, etc.",
+    "EquipmentValue": "10sp"
+  }
+]
