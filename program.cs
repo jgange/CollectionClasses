@@ -25,6 +25,7 @@ namespace character
             );
             backgrounds.Add(Craftsman);
 
+            /*
             if (backgrounds!=null)
             {
                 foreach(CharacterBackground background in backgrounds)
@@ -32,6 +33,9 @@ namespace character
                     background.Display();
                 }
             }
+            */
+
+            utilities.Display(Craftsman);
            
         }
     }
