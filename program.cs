@@ -25,19 +25,25 @@ namespace character
             );
             backgrounds.Add(Craftsman);
 
+            List<CharacterBackground>? backgrounds1 = new List<CharacterBackground>();
+            //backgrounds1 = CharacterBackground.Deserialize(@"./CharacterBackgrounds.json");
+            backgrounds1 = utilities.ReadFromDisk<CharacterBackground>(@"./CharacterBackgrounds.json");
+
             
-            if (backgrounds!=null)
+            if (backgrounds1!=null)
             {
                 foreach(CharacterBackground background in backgrounds)
                 {
                     utilities.Display(background);
                 }
             }
-
+            
+            /*
             if(backgrounds!=null)
             {
                 utilities.WriteToDisk(@"./CharacterBackgrounds.json", backgrounds);
             }
+            */
         }
     }
 }

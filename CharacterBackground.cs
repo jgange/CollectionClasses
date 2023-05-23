@@ -25,4 +25,5 @@ class CharacterBackground
         StartingSkills = startingskills;
         StartingEquipment = startingequipment;
     }
+
 }

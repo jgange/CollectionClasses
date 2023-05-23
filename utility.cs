@@ -2,6 +2,9 @@ namespace character
 {
     using System.Reflection;
     ﻿using System.Text.Json;
+    using System.Runtime.Serialization.Json;
+    using System.IO;
+    using System.Text;
 
     class utilities
     {
@@ -48,7 +51,13 @@ namespace character
             //Console.WriteLine(systemJsonReadable);
             //Console.WriteLine();
             File.WriteAllText(fileName, systemJsonReadable);
-        }   
+        }
 
+        static public List<T>? ReadFromDisk<T>(string path)
+        {
+            StreamReader r = new StreamReader(path);
+            string? json = r.ReadToEnd();
+            return JsonSerializer.Deserialize<List<T>>(json);
+        }
     }
 }
