@@ -88,9 +88,9 @@ class Race
         return JsonSerializer.Deserialize<List<Race>>(json);
     }
 
-    public void WriteToDisk(string fileName)
+    static public void WriteToDisk(string fileName, Race race)
     {
-        var systemJsonReadable = JsonSerializer.Serialize(this, new JsonSerializerOptions
+        var systemJsonReadable = JsonSerializer.Serialize(race, new JsonSerializerOptions
         {
             WriteIndented = true
         });
@@ -99,7 +99,7 @@ class Race
         File.WriteAllText(fileName, systemJsonReadable);
     }
 
-    static public void WriteListToDisk(string fileName, List<Race> races)
+    static public void WriteToDisk(string fileName, List<Race> races)
     {
         var systemJsonReadable = JsonSerializer.Serialize(races, new JsonSerializerOptions
         {

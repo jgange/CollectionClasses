@@ -1,18 +1,46 @@
-{
-    "RaceName":"Human",
-    "RaceType":"Base Human",
-    "StartingTaint":0,
-    "Languages":{},
-    "Skills":{},
-    "Special Abilities":{},
-    "BaseAttributes":
-    {
-        "Strength":10,
-        "Constitution":10,
-        "Dexterity":10,
-        "Size":10,
-        "Intellect":10,
-        "Power":10
-    }
-    ,"Backgrounds":{}
-}
+[
+  {
+    "RaceName": "Human",
+    "RaceType": "Base Human",
+    "StartingTaint": 0,
+    "Languages": [],
+    "Skills": [],
+    "SpecialAbilities": [],
+    "BaseAttributes": {
+      "Strength": 10,
+      "Constitution": 10,
+      "Dexterity": 10,
+      "Size": 10,
+      "Intellect": 10,
+      "Power": 10
+    },
+    "Backgrounds": []
+  },
+  {
+    "RaceName": "Elf",
+    "RaceType": "Near Human",
+    "StartingTaint": 0,
+    "Languages": [
+      "Elvish"
+    ],
+    "Skills": [
+      "Ranged Weapons",
+      "Tree Care"
+    ],
+    "SpecialAbilities": [
+      "Pathfinding",
+      "Woodcraft"
+    ],
+    "BaseAttributes": {
+      "Strength": 10,
+      "Constitution": 10,
+      "Dexterity": 12,
+      "Size": 10,
+      "Intellect": 12,
+      "Power": 12
+    },
+    "Backgrounds": [
+      "Forest Warden"
+    ]
+  }
+]
