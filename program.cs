@@ -25,18 +25,16 @@ namespace character
             );
             backgrounds.Add(Craftsman);
 
-            /*
+            
             if (backgrounds!=null)
             {
                 foreach(CharacterBackground background in backgrounds)
                 {
-                    background.Display();
+                    utilities.Display(background);
                 }
             }
-            */
 
-            utilities.Display(Craftsman);
-           
+            //utilities.Display(Craftsman);
         }
     }
 }

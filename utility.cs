@@ -11,23 +11,31 @@ namespace character
             {
                 foreach (var item in properties)
                 {
-                    switch(item.PropertyType.ToString())
+                    object? propval = obj.GetType().GetProperty(item.Name)?.GetValue(obj,null);
+                    if (propval!=null)
                     {
-                        case "System.String":
+                        switch(item.PropertyType.ToString())
+                        {
+                            case "System.String":
                             { 
-                                Console.WriteLine ("  {0}: {1}", item.Name, obj.GetType().GetProperty(item.Name).GetValue(obj,null));
+                                Console.WriteLine ("{0}: {1}", item.Name, propval);
                             }
                             break;
-                        case "System.Collections.Generic.List`1[System.String]":
-                            { Console.WriteLine ("  {0} {1}", item.Name, obj.GetType().GetProperty(item.Name).GetValue(obj,null));}
+                            case "System.Collections.Generic.List`1[System.String]":
+                            {   List<string> l = new List<string>();
+                                l = (List<string>)propval;
+                                    Console.WriteLine(item.Name);
+                                    foreach (string i in l)
+                                    {
+                                        Console.WriteLine ("- {0}", i);
+                                    }
+                            }
                             break;
+                        }
                     }
-                    //Console.WriteLine($" * {item.Name} {item.PropertyType}");
                 }
-
-                Console.WriteLine("--");
-                Console.WriteLine();
-             }
+            Console.WriteLine();
+            }
         }   
     }
 }
