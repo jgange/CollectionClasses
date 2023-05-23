@@ -20,13 +20,20 @@ namespace character
                     {
                         switch(item.PropertyType.ToString())
                         {
+                            case "System.Int32":
+                            {
+                                Console.WriteLine ("{0}: {1}", item.Name, propval);
+                            }
+                            break;
+                            
                             case "System.String":
                             { 
                                 Console.WriteLine ("{0}: {1}", item.Name, propval);
                             }
                             break;
                             case "System.Collections.Generic.List`1[System.String]":
-                            {   List<string> l = new List<string>();
+                            {   
+                                List<string> l = new List<string>();
                                 l = (List<string>)propval;
                                     Console.WriteLine(item.Name);
                                     foreach (string i in l)
@@ -34,6 +41,19 @@ namespace character
                                         Console.WriteLine ("- {0}", i);
                                     }
                             }
+                            break;
+                            case "System.Collections.Generic.Dictionary`2[System.String,System.Int32]":
+                            {
+                                Dictionary<string,int> d = new Dictionary<string,int>();
+                                d = (Dictionary<string,int>)propval;
+                                Console.WriteLine(item.Name);
+                                foreach (var entry in d)
+                                {
+                                    Console.WriteLine("   {0}: {1}",entry.Key, entry.Value);
+                                }
+                            };
+                            break;
+                            default: {Console.WriteLine(item.PropertyType.ToString());};
                             break;
                         }
                     }

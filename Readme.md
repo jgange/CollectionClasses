@@ -83,3 +83,102 @@ public void Display()
         Console.WriteLine();
         
     }
+
+//create a list of backgrounds and write them to disk
+            CharacterBackground Apothecary = new CharacterBackground(
+                "Apothecary",
+                "A brewer of strange potions.",
+                new List<string>{{"Corpus"},{"Knowledge"},{"Natural Lore"},{"Tinctures"}},
+                new List<string>{{"Reagants"},{"Mortar and Pestle"},{"Droppers and scales"},{"Leather apron"},{"Leather gloves"}}
+            );
+            
+            List<CharacterBackground> backgrounds = new List<CharacterBackground>();
+            backgrounds.Add(Apothecary);
+
+             CharacterBackground Craftsman = new CharacterBackground(
+                "Craftsman",
+                "Worker of crafts.",
+                new List<string>{{"Tinker"},{"Skill1"},{"Skill2"}},
+                new List<string>{{"Crafting Tools"},{"Crafting Supplies"},{"Harness or pack"},{"Set of working clothes"},{"Rags"}}
+            );
+            backgrounds.Add(Craftsman);
+
+            List<CharacterBackground>? backgrounds1 = new List<CharacterBackground>();
+            //backgrounds1 = CharacterBackground.Deserialize(@"./CharacterBackgrounds.json");
+            backgrounds1 = utilities.ReadFromDisk<CharacterBackground>(@"./CharacterBackgrounds.json");
+            
+            if (backgrounds1!=null)
+            {
+                foreach(CharacterBackground background in backgrounds)
+                {
+                    utilities.Display(background);
+                }
+            }
+            
+            /*
+            if(backgrounds!=null)
+            {
+                utilities.WriteToDisk(@"./CharacterBackgrounds.json", backgrounds);
+            }
+            */
+public void Display()
+    {
+        Console.WriteLine("Race: {0}", this.RaceName);
+        Console.WriteLine("Type: {0}", this.RaceType);
+        Console.WriteLine("Inherited Taint: {0}", this.StartingTaint);
+        
+        Console.WriteLine("Base Attributes");
+        foreach (var attribute in this.BaseAttributes)
+        {
+            Console.WriteLine("   {0}: {1}",attribute.Key, attribute.Value);
+        }
+        
+        ListDisplayHelper("Skills", this.Skills);
+        ListDisplayHelper("Languages", this.Languages);
+        ListDisplayHelper("Special Abilities", this.SpecialAbilities);
+
+    }
+    private void ListDisplayHelper(string Title, List<string> displayList)
+    {
+     Console.WriteLine(Title);
+        if (displayList.Count==0)
+        {
+            Console.WriteLine("   No extra {0}", Title);
+        }
+        else
+        {
+            foreach (var item in displayList)
+            {
+                Console.WriteLine("   {0}",item);
+            }
+        }
+    }
+
+    static public List<Race>? Deserialize(string path)
+    {
+        StreamReader r = new StreamReader(path);
+        string? json = r.ReadToEnd();
+        return JsonSerializer.Deserialize<List<Race>>(json);
+    }
+
+    static public void WriteToDisk(string fileName, Race race)
+    {
+        var systemJsonReadable = JsonSerializer.Serialize(race, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+        //Console.WriteLine(systemJsonReadable);
+        //Console.WriteLine();
+        File.WriteAllText(fileName, systemJsonReadable);
+    }
+
+    static public void WriteToDisk(string fileName, List<Race> races)
+    {
+        var systemJsonReadable = JsonSerializer.Serialize(races, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+        //Console.WriteLine(systemJsonReadable);
+        //Console.WriteLine();
+        File.WriteAllText(fileName, systemJsonReadable);
+    }
