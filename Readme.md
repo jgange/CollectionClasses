@@ -56,3 +56,30 @@ string fileName = @"./CharacterRaces.json";
                     CharacterRace.Display();
                 }
             }
+
+
+public void Display()
+    {
+        Console.WriteLine("Profession: {0}", Profession);
+        Console.WriteLine("Description: {0}", Description);
+        Console.WriteLine("Starting Skills");
+        if (StartingSkills!=null)
+        {
+            foreach(var skill in StartingSkills)
+            {
+                Console.WriteLine("   {0}",skill);
+            }
+        }
+        else {Console.WriteLine("No skills.");}
+         Console.WriteLine("Starting Equipment");
+        if (StartingEquipment!=null)
+        {
+            foreach(var item in StartingEquipment)
+            {
+                Console.WriteLine("   {0}",item);
+            }
+        }
+        else {Console.WriteLine("No starting equipment.");}
+        Console.WriteLine();
+        
+    }

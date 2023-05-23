@@ -1,6 +1,7 @@
 namespace character
 {
     using System.Reflection;
+    ﻿using System.Text.Json;
 
     class utilities
     {
@@ -36,6 +37,18 @@ namespace character
                 }
             Console.WriteLine();
             }
+        }
+
+        static public void WriteToDisk(string fileName, Object dataElement)
+        {
+            var systemJsonReadable = JsonSerializer.Serialize(dataElement, new JsonSerializerOptions
+            {
+                WriteIndented = true
+            });
+            //Console.WriteLine(systemJsonReadable);
+            //Console.WriteLine();
+            File.WriteAllText(fileName, systemJsonReadable);
         }   
+
     }
 }

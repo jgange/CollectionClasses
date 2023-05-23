@@ -34,7 +34,10 @@ namespace character
                 }
             }
 
-            //utilities.Display(Craftsman);
+            if(backgrounds!=null)
+            {
+                utilities.WriteToDisk(@"./CharacterBackgrounds.json", backgrounds);
+            }
         }
     }
 }

@@ -1,0 +1,35 @@
+[
+  {
+    "Profession": "Apothecary",
+    "Description": "A brewer of strange potions.",
+    "StartingSkills": [
+      "Corpus",
+      "Knowledge",
+      "Natural Lore",
+      "Tinctures"
+    ],
+    "StartingEquipment": [
+      "Reagants",
+      "Mortar and Pestle",
+      "Droppers and scales",
+      "Leather apron",
+      "Leather gloves"
+    ]
+  },
+  {
+    "Profession": "Craftsman",
+    "Description": "Worker of crafts.",
+    "StartingSkills": [
+      "Tinker",
+      "Skill1",
+      "Skill2"
+    ],
+    "StartingEquipment": [
+      "Crafting Tools",
+      "Crafting Supplies",
+      "Harness or pack",
+      "Set of working clothes",
+      "Rags"
+    ]
+  }
+]
