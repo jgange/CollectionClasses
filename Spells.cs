@@ -1,6 +1,6 @@
 namespace character;
 
-class Spell
+class Spells
 {
     public string? SpellName {get; set;}
     public string? SpellDescription {get; set;}
@@ -10,7 +10,7 @@ class Spell
     public string? Workings {get; set;}
     public string? Duration {get; set;}
 
-    public Spell(string name, string description, int q, string range, string affinity, string workings, string duration)
+    public Spells(string name, string description, int q, string range, string affinity, string workings, string duration)
     {
         SpellName = name;
         SpellDescription = description;

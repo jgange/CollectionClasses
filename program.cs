@@ -13,8 +13,8 @@ namespace character
             equipmentlist.Add(SewingKit);
 
 
-            List<Spell> spelllist = new List<Spell>();
-            Spell WispOfDirection = new Spell(
+            List<Spells> spelllist = new List<Spells>();
+            Spells WispOfDirection = new Spells(
                 "Wisp of Direction",
                 "This spell requests the help of a local spirit to find a place. The spirit can understand simple requests like 'take me to the nearest town' or 'help me find my way to the edge of the forest'.",
                 15,
@@ -24,7 +24,7 @@ namespace character
                 "1 cycle (either dusk to dawn or dawn to dusk)"
             );
             
-            Spell BindingOfStone = new Spell(
+            Spells BindingOfStone = new Spells(
                 "Binding of Stone",
                 "Target's feet sink into the ground and are unable to move until the spell expires. The caster can target anyone within 30'.",
                 15,
@@ -40,7 +40,7 @@ namespace character
             if (spelllist!=null)
             {
                 //utilities.WriteToDisk(@"./DataFiles/EquipmentList.json", equipmentlist);
-                foreach (Spell s in spelllist)
+                foreach (Spells s in spelllist)
                 {
                     utilities.Display(s);
                 }
@@ -48,6 +48,22 @@ namespace character
 
             if (spelllist!=null) { utilities.WriteToDisk(@"./DataFiles/SpellList.json", spelllist); }
 
+            List<Traits> traits = new List<Traits>();
+            Traits affinity = new Traits("Affinity","Positive","The character has a mystical connection to one of the Prime Symbols.");
+            Traits alert = new Traits("Alert","Positive","The character is hard to surprise. In combat you often strike first.");
+
+            traits.Add(affinity);
+            traits.Add(alert);
+
+            if (traits!=null)
+            {
+                foreach (Traits t in traits)
+                {
+                    utilities.Display(t);
+                }
+
+                utilities.WriteToDisk(@"./DataFiles/TraitList.json", traits);
+            }
         }
     }
 }

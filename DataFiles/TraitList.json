@@ -1,0 +1,12 @@
+[
+  {
+    "TraitName": "Affinity",
+    "TraitType": "Positive",
+    "TraitDescription": "The character has a mystical connection to one of the Prime Symbols."
+  },
+  {
+    "TraitName": "Alert",
+    "TraitType": "Positive",
+    "TraitDescription": "The character is hard to surprise. In combat you often strike first."
+  }
+]
