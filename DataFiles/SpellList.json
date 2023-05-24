@@ -1,0 +1,20 @@
+[
+  {
+    "SpellName": "Wisp of Direction",
+    "SpellDescription": "This spell requests the help of a local spirit to find a place. The spirit can understand simple requests like \u0027take me to the nearest town\u0027 or \u0027help me find my way to the edge of the forest\u0027.",
+    "QuintessenceCost": 15,
+    "Range": "10 miles",
+    "Affinity": "Spirit",
+    "Workings": "Spirit, Location, Communing",
+    "Duration": "1 cycle (either dusk to dawn or dawn to dusk)"
+  },
+  {
+    "SpellName": "Binding of Stone",
+    "SpellDescription": "Target\u0027s feet sink into the ground and are unable to move until the spell expires. The caster can target anyone within 30\u0027.",
+    "QuintessenceCost": 15,
+    "Range": "Within 30\u0027 of the caster",
+    "Affinity": "Earth",
+    "Workings": "Earth, Binding, Change",
+    "Duration": "1 hour"
+  }
+]

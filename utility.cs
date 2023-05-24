@@ -26,6 +26,12 @@ namespace character
                             }
                             break;
                             
+                            case "System.Nullable`1[System.Int32]":
+                            {
+                                Console.WriteLine ("{0}: {1}", item.Name, propval);
+                            }
+                            break;
+
                             case "System.String":
                             { 
                                 Console.WriteLine ("{0}: {1}", item.Name, propval);
