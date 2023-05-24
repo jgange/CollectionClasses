@@ -5,6 +5,8 @@ namespace character
     using System.Runtime.Serialization.Json;
     using System.IO;
     using System.Text;
+    using System.Text.Encodings.Web;
+    using System.Text.Unicode;
 
     class utilities
     {
@@ -70,8 +72,14 @@ namespace character
 
         static public void WriteToDisk(string fileName, Object dataElement)
         {
+            //var encoderSettings = new TextEncoderSettings();
+            //encoderSettings.AllowCharacters('\u0022', '\u0027');
+            //encoderSettings.AllowRange(UnicodeRanges.BasicLatin);
+
             var systemJsonReadable = JsonSerializer.Serialize(dataElement, new JsonSerializerOptions
             {
+                //Encoder = JavaScriptEncoder.Create(encoderSettings),
+                Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
                 WriteIndented = true
             });
             //Console.WriteLine(systemJsonReadable);
