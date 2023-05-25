@@ -62,7 +62,7 @@ namespace character
                     utilities.Display(t);
                 }
 
-                utilities.WriteToDisk(@"./DataFiles/TraitList.json", traits);
+                //utilities.WriteToDisk(@"./DataFiles/TraitList.json", traits);
             }
         }
     }
