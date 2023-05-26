@@ -11,7 +11,7 @@ namespace character;
     Inititialization should always create an empty object even if nothing will be added (e.g. empty list)
 */
 
-class CharacterBackground
+public class CharacterBackground
 {
     public string? Profession {get; set;}
     public string? Description {get; set;}

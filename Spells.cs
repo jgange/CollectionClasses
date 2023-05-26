@@ -1,6 +1,6 @@
 namespace character;
 
-class Spells
+public class Spells
 {
     public string? SpellName {get; set;}
     public string? SpellDescription {get; set;}

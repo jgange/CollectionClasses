@@ -1,6 +1,6 @@
 namespace character;
 
-class Equipment
+public class Equipment
 {
     public string EquipmentName {get; set;}
     public string EquipmentDescription {get; set;}

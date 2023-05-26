@@ -15,12 +15,12 @@ namespace character;
     Inititialization should always create an empty object even if nothing will be added (e.g. empty list)
 */
 
-class Race
+public class Race
 {
     public string RaceName {get; set;} = "Human";
     public string RaceType {get; set;} = "Base Human";
     public int StartingTaint {get; set;} = 0;
-    public List<string> Languages {get; set;} = new List<string>();
+    public List<string> Languages {get; set;} = new List<string>{"Trade"};
     public List<string> Skills {get; set;} = new List<string>();
     public List<string> SpecialAbilities {get; set;} = new List<string>();
     public Dictionary<string,int> BaseAttributes {get; set;} = new Dictionary<string, int>

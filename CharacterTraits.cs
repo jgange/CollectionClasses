@@ -1,6 +1,6 @@
 namespace character
 {
-    class Traits
+    public class Traits
     {
         public string? TraitName {get; set;}
         public string? TraitType {get; set;}
