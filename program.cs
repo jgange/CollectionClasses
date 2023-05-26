@@ -5,14 +5,21 @@ namespace character
     public class Program
     {
         public static void Main()
-        {
+        {           
+            
             PlayerCharacter? bob = new PlayerCharacter(
                 new Appearance("brown","brown","six feet","176#","good looking fellow"),
                 new CharacterDetails("Bob","The Mighty","From mighty folk."),
                 new List<Equipment>{new Equipment{ EquipmentName = "Rope", EquipmentDescription="A 50 foot long coil of rope", EquipmentValue="5 cp" }},
                 new List<Spell>{new Spell{SpellName = "Fireball",SpellDescription="A whirling globe of fire",QuintessenceCost=10,Range="50 yards",Affinity="Fire",Workings="Fire",Duration="Instant"}},
                 new List<Trait>{new Trait{TraitName="Affinity",TraitDescription="An affinity for a prime element.",TraitType="Positive"}},
-                new List<CharacterBackground>{new CharacterBackground{Profession="Apothecary",Description="A creator of potions",StartingSkills={"Lore","Nature"},StartingEquipment={"Mortar and Pestle"}}},
+                new List<CharacterBackground>{
+                    new CharacterBackground{
+                        Profession="Apothecary",
+                        Description="A creator of potions",
+                        StartingSkills=new List<string>{"Lore","Nature"},
+                        StartingEquipment=new List<string>{"Mortar and Pestle"}}
+                    },
                 new Race("Elf","Near Human",0, new List<string>{"Elvish"}, new List<string>{"Ranged Weapons","Tree Care"}, new List<string>{"Pathfinding","Woodcraft"},
                     new Dictionary<string, int>
                     {

@@ -48,7 +48,12 @@ namespace character
             if (Details!=null) { utilities.Display(Details); }
             if (Appearance!=null) { utilities.Display(Appearance); }
             if (CharacterRace!=null) { utilities.Display(CharacterRace);}
-
+            if (Traits!=null) {
+                foreach(Trait t in Traits)
+                {
+                    utilities.Display(t);
+                }
+            }
 
         }
 

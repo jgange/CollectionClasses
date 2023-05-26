@@ -1,5 +1,4 @@
 namespace character;
-﻿using System.Text.Json;
 
 /*
     Character background consists of-
@@ -15,8 +14,8 @@ public class CharacterBackground
 {
     public string? Profession {get; set;}
     public string? Description {get; set;}
-    public List<string>? StartingSkills {get; set;}
-    public List<string>? StartingEquipment {get; set;}
+    public List<string>? StartingSkills {get; set;} = new List<string>();
+    public List<string>? StartingEquipment {get; set;} = new List<string>();
 
     public CharacterBackground(string profession, string description, List<string>startingskills, List<string>startingequipment)
     {
