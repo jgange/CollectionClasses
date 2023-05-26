@@ -39,7 +39,8 @@ namespace character
                         {"Size",10},
                         {"Intellect",12},
                         {"Power",12}
-                    }
+                    },
+                new List<Skill>{new Skill{SkillName="Athletics",SkillType="Standard",SkillDescription="Any major physical activity."}}    
             );
 
             bob.Display();

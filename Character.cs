@@ -10,14 +10,17 @@ namespace character
         public List<CharacterBackground>? Backgrounds {get; set;}
         public Race? CharacterRace {get; set;}
         public Dictionary<string, int>? Attributes {get; set;}
+        public List<Skill>? Skills {get; set;}
 
         //constructor functionality - if no race is selected, should be create an empty race that defaults to human and assign the base attributes.
+        //need to add a skills class
+
         public PlayerCharacter()
         {
             CopyBaseAttributes();
         }
 
-        public PlayerCharacter(Appearance app, CharacterDetails details, List<Equipment> gear, List<Spell> spelllist, List<Trait> traits, List<CharacterBackground> professions, Race race, Dictionary<string, int> attributes)
+        public PlayerCharacter(Appearance app, CharacterDetails details, List<Equipment> gear, List<Spell> spelllist, List<Trait> traits, List<CharacterBackground> professions, Race race, Dictionary<string, int> attributes, List<Skill> skills)
         {
             Appearance = app;
             Details = details;
@@ -27,6 +30,7 @@ namespace character
             Backgrounds = professions;
             CharacterRace = race;
             Attributes = attributes;
+            Skills = skills;
 
             CopyBaseAttributes();
         }
@@ -52,6 +56,13 @@ namespace character
                 foreach(Trait t in Traits)
                 {
                     utilities.Display(t);
+                }
+            }
+            if (Skills!=null)
+            {
+                foreach(Skill s in Skills)
+                {
+                    utilities.Display(s);
                 }
             }
 
