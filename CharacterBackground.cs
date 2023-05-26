@@ -26,4 +26,6 @@ public class CharacterBackground
         StartingEquipment = startingequipment;
     }
 
+    public CharacterBackground() {}
+
 }

@@ -2,11 +2,11 @@ namespace character
 {
     public class PlayerCharacter{
 
-        public CharacterAppearance? Appearance {get; set;}
+        public Appearance? Appearance {get; set;} = new Appearance();
         public CharacterDetails? Details {get; set;}
         public List<Equipment>? EquipmentList {get; set;}
-        public List<Spells>? SpellList {get; set;}
-        public List<Traits>? Traits {get; set;}
+        public List<Spell>? SpellList {get; set;}
+        public List<Trait>? Traits {get; set;}
         public List<CharacterBackground>? Backgrounds {get; set;}
         public Race? CharacterRace {get; set;}
         public Dictionary<string, int>? Attributes {get; set;}
@@ -14,6 +14,20 @@ namespace character
         //constructor functionality - if no race is selected, should be create an empty race that defaults to human and assign the base attributes.
         public PlayerCharacter()
         {
+            CopyBaseAttributes();
+        }
+
+        public PlayerCharacter(Appearance app, CharacterDetails details, List<Equipment> gear, List<Spell> spelllist, List<Trait> traits, List<CharacterBackground> professions, Race race, Dictionary<string, int> attributes)
+        {
+            Appearance = app;
+            Details = details;
+            EquipmentList = gear;
+            SpellList = spelllist;
+            Traits = traits;
+            Backgrounds = professions;
+            CharacterRace = race;
+            Attributes = attributes;
+
             CopyBaseAttributes();
         }
 

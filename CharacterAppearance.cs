@@ -1,5 +1,5 @@
 namespace character;
-    public class CharacterAppearance
+    public class Appearance
     {
         public string? Hair {get; set;}
         public string? Eyes {get; set;}
@@ -7,7 +7,7 @@ namespace character;
         public string? Weight {get; set;}
         public string? GeneralDescription {get; set;}
 
-    public CharacterAppearance(string hair, string eyes, string height, string weight, string description)
+    public Appearance(string hair, string eyes, string height, string weight, string description)
     {
         Hair = hair;
         Eyes = eyes;
@@ -16,5 +16,5 @@ namespace character;
         GeneralDescription = description;
     }
 
-    public CharacterAppearance() {}
+    public Appearance() {}
 }

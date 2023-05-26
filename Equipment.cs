@@ -2,9 +2,9 @@ namespace character;
 
 public class Equipment
 {
-    public string EquipmentName {get; set;}
-    public string EquipmentDescription {get; set;}
-    public string EquipmentValue {get; set;}
+    public string? EquipmentName {get; set;}
+    public string? EquipmentDescription {get; set;}
+    public string? EquipmentValue {get; set;}
 
     public Equipment(string name, string description, string value)
     {
@@ -12,5 +12,7 @@ public class Equipment
         EquipmentDescription = description;
         EquipmentValue = value;
     }
+
+    public Equipment() {}
 
 }
