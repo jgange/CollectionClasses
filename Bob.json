@@ -1,0 +1,94 @@
+{
+  "Appearance": {
+    "Hair": "brown",
+    "Eyes": "brown",
+    "Height": "six feet",
+    "Weight": "176#",
+    "GeneralDescription": "good looking fellow"
+  },
+  "Details": {
+    "CharacterName": "Bob",
+    "CharacterTitle": "The Mighty",
+    "CharacterOrigin": "From mighty folk."
+  },
+  "EquipmentList": [
+    {
+      "EquipmentName": "Rope",
+      "EquipmentDescription": "A 50 foot long coil of rope",
+      "EquipmentValue": "5 cp"
+    }
+  ],
+  "SpellList": [
+    {
+      "SpellName": "Fireball",
+      "SpellDescription": "A whirling globe of fire",
+      "QuintessenceCost": 10,
+      "Range": "50 yards",
+      "Affinity": "Fire",
+      "Workings": "Fire",
+      "Duration": "Instant"
+    }
+  ],
+  "Traits": [
+    {
+      "TraitName": "Affinity",
+      "TraitType": "Positive",
+      "TraitDescription": "An affinity for a prime element."
+    }
+  ],
+  "Backgrounds": [
+    {
+      "Profession": "Apothecary",
+      "Description": "A creator of potions",
+      "StartingSkills": [
+        "Lore",
+        "Nature"
+      ],
+      "StartingEquipment": [
+        "Mortar and Pestle"
+      ]
+    }
+  ],
+  "CharacterRace": {
+    "RaceName": "Elf",
+    "RaceType": "Near Human",
+    "StartingTaint": 0,
+    "Languages": [
+      "Elvish"
+    ],
+    "Skills": [
+      "Ranged Weapons",
+      "Tree Care"
+    ],
+    "SpecialAbilities": [
+      "Pathfinding",
+      "Woodcraft"
+    ],
+    "BaseAttributes": {
+      "Strength": 10,
+      "Constitution": 10,
+      "Dexterity": 12,
+      "Size": 10,
+      "Intellect": 12,
+      "Power": 12
+    },
+    "Backgrounds": [
+      "Forest Warden"
+    ]
+  },
+  "Attributes": {
+    "Strength": 10,
+    "Constitution": 10,
+    "Dexterity": 12,
+    "Size": 10,
+    "Intellect": 12,
+    "Power": 12
+  },
+  "Skills": [
+    {
+      "SkillName": "Athletics",
+      "SkillType": "Standard",
+      "SkillDescription": "Any major physical activity."
+    }
+  ]
+}

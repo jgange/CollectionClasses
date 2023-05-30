@@ -44,6 +44,7 @@ namespace character
             else
             {
                 CharacterRace = new Race();
+                Attributes = CharacterRace.BaseAttributes;
             }
         }
 

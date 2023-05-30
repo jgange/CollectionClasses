@@ -58,6 +58,7 @@ namespace character
                                 foreach (var entry in d)
                                 {
                                     Console.WriteLine("   {0}: {1}",entry.Key, entry.Value);
+                                    //Console.WriteLine("   {0}",entry.Value);
                                 }
                             };
                             break;

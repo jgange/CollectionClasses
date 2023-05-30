@@ -44,6 +44,7 @@ namespace character
             );
 
             bob.Display();
+            utilities.WriteToDisk(@"./Bob.json", bob);
             
         }
     }
