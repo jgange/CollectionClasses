@@ -52,6 +52,10 @@ namespace character
             if (Details!=null) { utilities.Display(Details); }
             if (Appearance!=null) { utilities.Display(Appearance); }
             if (CharacterRace!=null) { utilities.Display(CharacterRace);}
+            if (Attributes!=null) {
+                foreach(var a in Attributes)
+                utilities.Display(a);
+            }
             if (Traits!=null) {
                 foreach(Trait t in Traits)
                 {
