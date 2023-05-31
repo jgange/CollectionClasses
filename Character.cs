@@ -70,6 +70,13 @@ namespace character
                     utilities.Display(s);
                 }
             }
+            if (Backgrounds!=null)
+            {
+                foreach(CharacterBackground b in Backgrounds)
+                {
+                    utilities.Display(b);
+                }
+            }
 
         }
 

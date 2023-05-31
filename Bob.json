@@ -16,6 +16,11 @@
       "EquipmentName": "Rope",
       "EquipmentDescription": "A 50 foot long coil of rope",
       "EquipmentValue": "5 cp"
+    },
+    {
+      "EquipmentName": "Lantern",
+      "EquipmentDescription": "A hooded lantern.",
+      "EquipmentValue": "5 sp"
     }
   ],
   "SpellList": [
@@ -27,6 +32,15 @@
       "Affinity": "Fire",
       "Workings": "Fire",
       "Duration": "Instant"
+    },
+    {
+      "SpellName": "Cloak of Mist",
+      "SpellDescription": "Mist gathers around the caster to conceal them.",
+      "QuintessenceCost": 10,
+      "Range": "5 yards",
+      "Affinity": "Water,Air",
+      "Workings": "Air",
+      "Duration": "1 hour"
     }
   ],
   "Traits": [
@@ -34,6 +48,11 @@
       "TraitName": "Affinity",
       "TraitType": "Positive",
       "TraitDescription": "An affinity for a prime element."
+    },
+    {
+      "TraitName": "Surly",
+      "TraitType": "Negative",
+      "TraitDescription": "Unpleasant to be around."
     }
   ],
   "Backgrounds": [
@@ -45,7 +64,8 @@
         "Nature"
       ],
       "StartingEquipment": [
-        "Mortar and Pestle"
+        "Mortar and Pestle",
+        "Leather Apron"
       ]
     }
   ],
