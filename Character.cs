@@ -80,5 +80,15 @@ namespace character
 
         }
 
+        public PlayerCharacter ReadFromDisk(string path)
+        {
+            // Need to figure out how to read the entire complex object
+            PlayerCharacter? p = new PlayerCharacter();
+            p.Display();
+            //utilities.ReadFromDisk
+
+            return p;
+
+        }
     }
 }

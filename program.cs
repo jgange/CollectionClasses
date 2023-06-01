@@ -53,8 +53,11 @@ namespace character
                 new List<Skill>{new Skill{SkillName="Athletics",SkillType="Standard",SkillDescription="Any major physical activity."}}    
             );
 
-            bob.Display();
-            utilities.WriteToDisk(@"./Bob.json", bob);
+            //bob.Display();
+            //utilities.WriteToDisk(@"./Bob.json", bob);
+
+            PlayerCharacter? billy = new PlayerCharacter();
+            billy.ReadFromDisk(@"Bob.json");
             
         }
     }
